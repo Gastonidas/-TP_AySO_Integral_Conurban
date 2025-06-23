@@ -1,0 +1,60 @@
+2025-06-22 20:27:11,964 p=5318 u=vagrant n=ansible | [WARNING]:  * Failed to parse /home/vagrant/compartido/ansible/inventory/hosts
+with yaml plugin: We were unable to read either as JSON nor YAML, these are the
+errors we got from each: JSON: Expecting value: line 1 column 2 (char 1)
+Syntax Error while loading YAML.   did not find expected <document start>  The
+error appears to be in '/home/vagrant/compartido/ansible/inventory/hosts': line
+2, column 1, but may be elsewhere in the file depending on the exact syntax
+problem.  The offending line appears to be:  [all:children] testing ^ here
+
+2025-06-22 20:27:11,970 p=5318 u=vagrant n=ansible | [WARNING]:  * Failed to parse /home/vagrant/compartido/ansible/inventory/hosts
+with ini plugin: /home/vagrant/compartido/ansible/inventory/hosts:6: Expected
+key=value host variable assignment, got: ansible_host192.168.56.6
+
+2025-06-22 20:27:11,973 p=5318 u=vagrant n=ansible | [WARNING]: Unable to parse /home/vagrant/compartido/ansible/inventory/hosts as
+an inventory source
+
+2025-06-22 20:27:11,977 p=5318 u=vagrant n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2025-06-22 20:27:12,000 p=5318 u=vagrant n=ansible | {
+    "_meta": {
+        "hostvars": {}
+    },
+    "all": {
+        "children": [
+            "produccion",
+            "ungrouped"
+        ]
+    }
+}
+2025-06-22 20:42:18,948 p=5336 u=vagrant n=ansible | {
+    "_meta": {
+        "hostvars": {
+            "vmHost1": {
+                "ansible_host": "192.168.56.5",
+                "ansible_user": "vagrant"
+            },
+            "vmHost2": {
+                "ansible_host": "192.168.56.6",
+                "ansible_user": "vagrant"
+            }
+        }
+    },
+    "all": {
+        "children": [
+            "produccion",
+            "testing",
+            "ungrouped"
+        ]
+    },
+    "produccion": {
+        "hosts": [
+            "vmHost2"
+        ]
+    },
+    "testing": {
+        "hosts": [
+            "vmHost1"
+        ]
+    }
+}
+2025-06-22 20:47:52,796 p=5337 u=vagrant n=ansible | - Role TP_INI was created successfully
