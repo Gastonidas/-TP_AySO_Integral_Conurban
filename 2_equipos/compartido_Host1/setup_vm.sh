@@ -6,10 +6,10 @@ echo "Iniciando la configuración inicial de la VM..."
 echo "---------------------------------------------------------"
 
 
-echo "cruzado de claves"
-ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 -N ""
-ssh-copy-id -i ~/.ssh/id_ed25519.pub vagrant@192.168.56.5
-ssh-copy-id -i ~/.ssh/id_ed25519.pub vagrant@192.168.56.6
+#echo "cruzado de claves"
+#ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 -N ""
+#ssh-copy-id -i ~/.ssh/id_ed25519.pub vagrant@192.168.56.5
+#ssh-copy-id -i ~/.ssh/id_ed25519.pub vagrant@192.168.56.6
 
 # 1 Crear la estructura de directorios
 echo "Creando estructura de directorios: Bash_script/"
