@@ -1,0 +1,34 @@
+---
+- hosts: 
+  - all
+# - testing
+# - produccion
+  
+  # Variables Globales
+  vars_files:
+    - vars/main.yml
+
+  tasks:
+    - name: "Inicio"
+      debug:
+        msg: "Comienza la ejecucion de roles Conurban"
+  
+    - name: "Rol: TP_INI"
+      import_role:
+        name:  TP_INI
+
+    - name: "Rol: Alta_Usuarios_Conurban"
+      import_role:
+        name: Alta_Usuarios_Conurban
+
+    - name: "Rol: Sudoers_Conurban"
+      import_role:
+        name:  Sudoers_Conurban
+
+    - name: "Rol: Instala-tools_Conurban"
+      import_role:
+        name: Instala-tools_Conurban
+    
+    - name: "Mensaje Final Ejecucion"
+      debug:
+        msg: "Todos los roles fueron ejecutados correctamente"

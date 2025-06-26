@@ -1,0 +1,19 @@
+---
+nombre_grupo: Conurban
+division: 314
+fecha: "{{ lookup('pipe', 'date +%Y-%m-%d') }}"
+distro: "{{ ansible_distribution }}"
+cores: "{{ ansible_processor_cores }}"
+integrantes:
+  - nombre: Gaston
+    apellido: Fragueiro
+  - nombre: Daira
+    apellido: Haunau
+  - nombre: Federico
+    apellido: Ojeda
+  - nombre: Agostina
+    apellido: Sanchez
+  - nombre: Lucas
+    apellido: Fonseca
+  - nombre: Agustin
+    apellido: Gil

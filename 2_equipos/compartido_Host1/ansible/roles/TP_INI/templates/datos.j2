@@ -1,0 +1,11 @@
+Nombre Grupo: {{ nombre_grupo }}
+División: {{ division }}
+Fecha: {{ fecha }}
+-------------------------
+Distribución: {{ distro }}
+Cantidad de Cores: {{ cores }}
+-------------------------
+{% for persona in integrantes %}
+R{{ loop.index }}: Nombre: {{ persona.nombre }} Apellido: {{ persona.apellido }}
+{% endfor %}
+
