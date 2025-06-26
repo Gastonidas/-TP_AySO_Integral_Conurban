@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+    web:
+        image: #ruklansi/tp-div-314-grupo-conurban
+               gastonidas/imagen_lider
+               #agostinabsanchez/imagenr4
+               #dhaunau/imagen-r2
+               #fedeojeda92/imagen-r3
+        
+        ports:
+            - 8081:80
+        volumes:
+            - ./web/file:/usr/share/nginx/html/file

@@ -1,0 +1,16 @@
+---
+- name: "Crear directorio /tmp/Grupo"
+  file:
+    path: /tmp/Grupo
+    state: directory
+    owner: vagrant
+    group: vagrant
+    mode: '0755'
+
+- name: "Generar archivo datos.txt desde template"
+  template:
+    src: datos.j2
+    dest: /tmp/Grupo/datos.txt
+    owner: vagrant
+    group: vagrant
+    mode: '0644'

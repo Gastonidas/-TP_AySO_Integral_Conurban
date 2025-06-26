@@ -1,0 +1,13 @@
+---
+# vars file for Alta_Usuarios_Conurban
+
+integrantes:
+  - numero: 1
+  - numero: 2
+  - numero: 3
+  - numero: 4
+  - numero: 5
+  - numero: 6
+
+# La clave hash  del usuario  vagrant:
+clave_vagrant: "{{ lookup('pipe', 'openssl passwd -6 vagrant') }}"
