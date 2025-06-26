@@ -1,2 +1,50 @@
 ---
 # tasks file for Instala-tools_Conurban
+
+- name: Instala EPEL en sistemas basados en Red Hat
+  become: yes
+  ansible.builtin.dnf:
+    name: epel-release
+    state: present
+  when: ansible_os_family == "RedHat"
+
+- name: Habilita CRB si es RHEL/CentOS 9
+  become: yes
+  ansible.builtin.command: dnf config-manager --set-enabled crb
+  when: ansible_os_family == "RedHat" and ansible_distribution_major_version == "9"
+  ignore_errors: true
+
+- name: Actualiza caché en sistemas Red Hat
+  become: yes
+  ansible.builtin.dnf:
+    update_cache: true
+  when: ansible_os_family == "RedHat"
+
+- name: Actualiza caché en sistemas Debian
+  become: yes
+  ansible.builtin.apt:
+    update_cache: true
+  when: ansible_os_family == "Debian"
+
+- name: Instala herramientas en sistemas Red Hat
+  become: yes
+  ansible.builtin.dnf:
+    name: "{{ item }}"
+    state: present
+  loop:
+    # - htop  # Requiere libhwloc.so.15 que no está en repos estándar
+    # - tmux  # Puede no estar disponible en RHEL9 sin CRB habilitado y suscripción
+    - speedtest-cli
+  when: ansible_os_family == "RedHat"
+
+- name: Instala herramientas en sistemas Debian
+  become: yes
+  ansible.builtin.apt:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - htop
+    - tmux
+    - speedtest-cli
+  when: ansible_os_family == "Debian"
+

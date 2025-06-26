@@ -1,2 +1,26 @@
 ---
 # tasks file for Alta_Usuarios_Conurban
+- name: "Crear grupo secundario con Nombre del Equipo"
+  become: yes
+  group:
+    name: Conurban
+    state: present
+
+- name: "Crear grupos principales para cada rol"
+  become: yes
+  group:
+    name: "G_R{{ item }}"
+    state: present
+  loop: [1, 2, 3, 4, 5, 6]
+
+- name: "Crear usuarios del grupo"
+  become: yes
+  user:
+    name: "R{{ item.numero }}"
+    password: "{{ clave_vagrant }}"
+    group: "G_R{{ item.numero }}"
+    groups: Conurban
+    shell: /bin/bash
+    state: present
+    create_home: yes
+  loop: "{{ integrantes }}"

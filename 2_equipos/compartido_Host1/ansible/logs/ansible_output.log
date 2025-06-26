@@ -58,3 +58,558 @@ an inventory source
     }
 }
 2025-06-22 20:47:52,796 p=5337 u=vagrant n=ansible | - Role TP_INI was created successfully
+2025-06-25 23:59:07,287 p=4617 u=vagrant n=ansible | ERROR! vars file vars/main.yml was not found
+Could not find file on the Ansible Controller.
+If you are using a module and expect the file to exist on the remote, see the remote_src option
+2025-06-26 00:07:36,182 p=4708 u=vagrant n=ansible | PLAY [all] ***************************************************************************************************************
+2025-06-26 00:07:36,296 p=4708 u=vagrant n=ansible | TASK [Gathering Facts] ***************************************************************************************************
+2025-06-26 00:07:37,194 p=4708 u=vagrant n=ansible | fatal: [vmHost1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Failed to add the host to the list of known hosts (/dev/nul).\r\nvagrant@192.168.56.5: Permission denied (publickey,password).", "unreachable": true}
+2025-06-26 00:07:37,222 p=4708 u=vagrant n=ansible | fatal: [vmHost2]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Failed to add the host to the list of known hosts (/dev/nul).\r\nvagrant@192.168.56.6: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).", "unreachable": true}
+2025-06-26 00:07:37,224 p=4708 u=vagrant n=ansible | PLAY RECAP ***************************************************************************************************************
+2025-06-26 00:07:37,227 p=4708 u=vagrant n=ansible | vmHost1                    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2025-06-26 00:07:37,228 p=4708 u=vagrant n=ansible | vmHost2                    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2025-06-26 00:18:48,933 p=4737 u=vagrant n=ansible | PLAY [all] **************************************************************************************************************************************************************************************************************
+2025-06-26 00:18:48,991 p=4737 u=vagrant n=ansible | TASK [Gathering Facts] **************************************************************************************************************************************************************************************************
+2025-06-26 00:18:49,253 p=4737 u=vagrant n=ansible | fatal: [vmHost2]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Failed to add the host to the list of known hosts (/dev/nul).\r\nno such identity: /home/vagrant/.ssh/id_ed25519: No such file or directory\r\nvagrant@192.168.56.6: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).", "unreachable": true}
+2025-06-26 00:18:49,267 p=4737 u=vagrant n=ansible | fatal: [vmHost1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Failed to add the host to the list of known hosts (/dev/nul).\r\nno such identity: /home/vagrant/.ssh/id_ed25519: No such file or directory\r\nvagrant@192.168.56.5: Permission denied (publickey,password).", "unreachable": true}
+2025-06-26 00:18:49,269 p=4737 u=vagrant n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************************************
+2025-06-26 00:18:49,269 p=4737 u=vagrant n=ansible | vmHost1                    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2025-06-26 00:18:49,271 p=4737 u=vagrant n=ansible | vmHost2                    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2025-06-26 00:29:23,702 p=4756 u=vagrant n=ansible | PLAY [all] **************************************************************************************************************************************************************************************************************
+2025-06-26 00:29:23,758 p=4756 u=vagrant n=ansible | TASK [Gathering Facts] **************************************************************************************************************************************************************************************************
+2025-06-26 00:29:23,842 p=4756 u=vagrant n=ansible | fatal: [vmHost2]: FAILED! => {"msg": "to use the 'ssh' connection type with passwords, you must install the sshpass program"}
+2025-06-26 00:29:23,856 p=4756 u=vagrant n=ansible | fatal: [vmHost1]: FAILED! => {"msg": "to use the 'ssh' connection type with passwords, you must install the sshpass program"}
+2025-06-26 00:29:23,858 p=4756 u=vagrant n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************************************
+2025-06-26 00:29:23,858 p=4756 u=vagrant n=ansible | vmHost1                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-06-26 00:29:23,860 p=4756 u=vagrant n=ansible | vmHost2                    : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-06-26 00:33:42,760 p=4782 u=vagrant n=ansible | PLAY [all] **************************************************************************************************************************************************************************************************************
+2025-06-26 00:33:42,816 p=4782 u=vagrant n=ansible | TASK [Gathering Facts] **************************************************************************************************************************************************************************************************
+2025-06-26 00:33:43,028 p=4782 u=vagrant n=ansible | fatal: [vmHost1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Failed to add the host to the list of known hosts (/dev/nul).\r\nno such identity: /home/vagrant/.ssh/id_ed25519: No such file or directory\r\nvagrant@192.168.56.5: Permission denied (publickey,password).", "unreachable": true}
+2025-06-26 00:33:43,046 p=4782 u=vagrant n=ansible | fatal: [vmHost2]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Failed to add the host to the list of known hosts (/dev/nul).\r\nno such identity: /home/vagrant/.ssh/id_ed25519: No such file or directory\r\nvagrant@192.168.56.6: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).", "unreachable": true}
+2025-06-26 00:33:43,048 p=4782 u=vagrant n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************************************
+2025-06-26 00:33:43,049 p=4782 u=vagrant n=ansible | vmHost1                    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2025-06-26 00:33:43,050 p=4782 u=vagrant n=ansible | vmHost2                    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2025-06-26 00:38:34,657 p=4813 u=vagrant n=ansible | PLAY [all] **************************************************************************************************************************************************************************************************************
+2025-06-26 00:38:34,710 p=4813 u=vagrant n=ansible | TASK [Gathering Facts] **************************************************************************************************************************************************************************************************
+2025-06-26 00:38:34,949 p=4813 u=vagrant n=ansible | fatal: [vmHost2]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Failed to add the host to the list of known hosts (/dev/nul).\r\nno such identity: .vagrant/machines/default/virtualbox/private_key: No such file or directory\r\nvagrant@192.168.56.6: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).", "unreachable": true}
+2025-06-26 00:38:34,973 p=4813 u=vagrant n=ansible | fatal: [vmHost1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Failed to add the host to the list of known hosts (/dev/nul).\r\nno such identity: .vagrant/machines/default/virtualbox/private_key: No such file or directory\r\nvagrant@192.168.56.5: Permission denied (publickey,password).", "unreachable": true}
+2025-06-26 00:38:34,975 p=4813 u=vagrant n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************************************
+2025-06-26 00:38:34,976 p=4813 u=vagrant n=ansible | vmHost1                    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2025-06-26 00:38:34,976 p=4813 u=vagrant n=ansible | vmHost2                    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2025-06-26 00:46:49,766 p=4841 u=vagrant n=ansible | vmHost1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: Failed to add the host to the list of known hosts (/dev/nul).\r\nno such identity: .vagrant/machines/segundo/virtualbox/private_key: No such file or directory\r\nvagrant@192.168.56.5: Permission denied (publickey,password).",
+    "unreachable": true
+}
+2025-06-26 00:46:49,773 p=4841 u=vagrant n=ansible | vmHost2 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: Failed to add the host to the list of known hosts (/dev/nul).\r\nno such identity: .vagrant/machines/primero/virtualbox/private_key: No such file or directory\r\nvagrant@192.168.56.6: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).",
+    "unreachable": true
+}
+2025-06-26 00:55:23,920 p=4861 u=vagrant n=ansible | PLAY [all] **************************************************************************************************************************************************************************************************************
+2025-06-26 00:55:23,981 p=4861 u=vagrant n=ansible | TASK [Gathering Facts] **************************************************************************************************************************************************************************************************
+2025-06-26 00:55:24,223 p=4861 u=vagrant n=ansible | fatal: [vmHost1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Failed to add the host to the list of known hosts (/dev/nul).\r\nno such identity: .vagrant/machines/primero/virtualbox/private_key: No such file or directory\r\nvagrant@192.168.56.5: Permission denied (publickey,password).", "unreachable": true}
+2025-06-26 00:55:24,246 p=4861 u=vagrant n=ansible | fatal: [vmHost2]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Failed to add the host to the list of known hosts (/dev/nul).\r\nno such identity: .vagrant/machines/segundo/virtualbox/private_key: No such file or directory\r\nvagrant@192.168.56.6: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).", "unreachable": true}
+2025-06-26 00:55:24,248 p=4861 u=vagrant n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************************************
+2025-06-26 00:55:24,249 p=4861 u=vagrant n=ansible | vmHost1                    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2025-06-26 00:55:24,250 p=4861 u=vagrant n=ansible | vmHost2                    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2025-06-26 01:09:31,820 p=5204 u=vagrant n=ansible | vmHost2 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: Failed to add the host to the list of known hosts (/dev/nul).\r\nno such identity: .vagrant/machines/segundo/virtualbox/private_key: No such file or directory\r\nvagrant@192.168.56.6: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).",
+    "unreachable": true
+}
+2025-06-26 01:09:31,850 p=5204 u=vagrant n=ansible | vmHost1 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: Failed to add the host to the list of known hosts (/dev/nul).\r\nno such identity: .vagrant/machines/primero/virtualbox/private_key: No such file or directory\r\nvagrant@192.168.56.5: Permission denied (publickey,password).",
+    "unreachable": true
+}
+2025-06-26 01:11:47,947 p=5225 u=vagrant n=ansible | PLAY [all] **************************************************************************************************************************************************************************************************************
+2025-06-26 01:11:47,998 p=5225 u=vagrant n=ansible | TASK [Gathering Facts] **************************************************************************************************************************************************************************************************
+2025-06-26 01:11:53,620 p=5225 u=vagrant n=ansible | ok: [vmHost2]
+2025-06-26 01:11:53,964 p=5225 u=vagrant n=ansible | ok: [vmHost1]
+2025-06-26 01:11:54,025 p=5225 u=vagrant n=ansible | TASK [include_role : TP_INI] ********************************************************************************************************************************************************************************************
+2025-06-26 01:11:54,253 p=5225 u=vagrant n=ansible | TASK [TP_INI : Crear directorio /tmp/Grupo] *****************************************************************************************************************************************************************************
+2025-06-26 01:11:55,136 p=5225 u=vagrant n=ansible | changed: [vmHost1]
+2025-06-26 01:11:55,304 p=5225 u=vagrant n=ansible | changed: [vmHost2]
+2025-06-26 01:11:55,337 p=5225 u=vagrant n=ansible | TASK [TP_INI : Generar archivo datos.txt desde template] ****************************************************************************************************************************************************************
+2025-06-26 01:11:55,566 p=5225 u=vagrant n=ansible | fatal: [vmHost1]: FAILED! => {"changed": false, "msg": "Could not find or access 'datos.txt.j2'\nSearched in:\n\t/home/vagrant/compartido/ansible/roles/TP_INI/templates/datos.txt.j2\n\t/home/vagrant/compartido/ansible/roles/TP_INI/datos.txt.j2\n\t/home/vagrant/compartido/ansible/roles/TP_INI/tasks/templates/datos.txt.j2\n\t/home/vagrant/compartido/ansible/roles/TP_INI/tasks/datos.txt.j2\n\t/home/vagrant/compartido/ansible/templates/datos.txt.j2\n\t/home/vagrant/compartido/ansible/datos.txt.j2 on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2025-06-26 01:11:55,661 p=5225 u=vagrant n=ansible | fatal: [vmHost2]: FAILED! => {"changed": false, "msg": "Could not find or access 'datos.txt.j2'\nSearched in:\n\t/home/vagrant/compartido/ansible/roles/TP_INI/templates/datos.txt.j2\n\t/home/vagrant/compartido/ansible/roles/TP_INI/datos.txt.j2\n\t/home/vagrant/compartido/ansible/roles/TP_INI/tasks/templates/datos.txt.j2\n\t/home/vagrant/compartido/ansible/roles/TP_INI/tasks/datos.txt.j2\n\t/home/vagrant/compartido/ansible/templates/datos.txt.j2\n\t/home/vagrant/compartido/ansible/datos.txt.j2 on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2025-06-26 01:11:55,664 p=5225 u=vagrant n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************************************
+2025-06-26 01:11:55,665 p=5225 u=vagrant n=ansible | vmHost1                    : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-06-26 01:11:55,666 p=5225 u=vagrant n=ansible | vmHost2                    : ok=2    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-06-26 01:15:09,865 p=5474 u=vagrant n=ansible | PLAY [all] **************************************************************************************************************************************************************************************************************
+2025-06-26 01:15:09,915 p=5474 u=vagrant n=ansible | TASK [Gathering Facts] **************************************************************************************************************************************************************************************************
+2025-06-26 01:15:12,819 p=5474 u=vagrant n=ansible | ok: [vmHost2]
+2025-06-26 01:15:12,966 p=5474 u=vagrant n=ansible | ok: [vmHost1]
+2025-06-26 01:15:13,022 p=5474 u=vagrant n=ansible | TASK [include_role : TP_INI] ********************************************************************************************************************************************************************************************
+2025-06-26 01:15:13,235 p=5474 u=vagrant n=ansible | TASK [TP_INI : Crear directorio /tmp/Grupo] *****************************************************************************************************************************************************************************
+2025-06-26 01:15:14,124 p=5474 u=vagrant n=ansible | ok: [vmHost1]
+2025-06-26 01:15:14,295 p=5474 u=vagrant n=ansible | ok: [vmHost2]
+2025-06-26 01:15:14,324 p=5474 u=vagrant n=ansible | TASK [TP_INI : Generar archivo datos.txt desde template] ****************************************************************************************************************************************************************
+2025-06-26 01:15:16,090 p=5474 u=vagrant n=ansible | changed: [vmHost1]
+2025-06-26 01:15:16,279 p=5474 u=vagrant n=ansible | changed: [vmHost2]
+2025-06-26 01:15:16,312 p=5474 u=vagrant n=ansible | TASK [Otra tarea] *******************************************************************************************************************************************************************************************************
+2025-06-26 01:15:16,380 p=5474 u=vagrant n=ansible | ok: [vmHost2] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2025-06-26 01:15:16,389 p=5474 u=vagrant n=ansible | ok: [vmHost1] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2025-06-26 01:15:16,451 p=5474 u=vagrant n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************************************
+2025-06-26 01:15:16,452 p=5474 u=vagrant n=ansible | vmHost1                    : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-06-26 01:15:16,452 p=5474 u=vagrant n=ansible | vmHost2                    : ok=4    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-06-26 02:27:46,416 p=5830 u=vagrant n=ansible | PLAY [all] **************************************************************************************************************************************************************************************************************
+2025-06-26 02:27:46,471 p=5830 u=vagrant n=ansible | TASK [Gathering Facts] **************************************************************************************************************************************************************************************************
+2025-06-26 02:27:49,343 p=5830 u=vagrant n=ansible | ok: [vmHost2]
+2025-06-26 02:27:49,781 p=5830 u=vagrant n=ansible | ok: [vmHost1]
+2025-06-26 02:27:49,833 p=5830 u=vagrant n=ansible | TASK [Otra tarea] *******************************************************************************************************************************************************************************************************
+2025-06-26 02:27:49,900 p=5830 u=vagrant n=ansible | ok: [vmHost2] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2025-06-26 02:27:49,912 p=5830 u=vagrant n=ansible | ok: [vmHost1] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2025-06-26 02:27:49,942 p=5830 u=vagrant n=ansible | TASK [TP_INI : Crear directorio /tmp/Grupo] *****************************************************************************************************************************************************************************
+2025-06-26 02:27:50,744 p=5830 u=vagrant n=ansible | ok: [vmHost1]
+2025-06-26 02:27:50,912 p=5830 u=vagrant n=ansible | ok: [vmHost2]
+2025-06-26 02:27:50,939 p=5830 u=vagrant n=ansible | TASK [TP_INI : Generar archivo datos.txt desde template] ****************************************************************************************************************************************************************
+2025-06-26 02:27:53,361 p=5830 u=vagrant n=ansible | ok: [vmHost1]
+2025-06-26 02:27:53,444 p=5830 u=vagrant n=ansible | ok: [vmHost2]
+2025-06-26 02:27:53,473 p=5830 u=vagrant n=ansible | TASK [Alta_Usuarios_Conurban : Crear grupo secundario con Nombre del Equipo] ********************************************************************************************************************************************
+2025-06-26 02:27:54,364 p=5830 u=vagrant n=ansible | changed: [vmHost1]
+2025-06-26 02:27:54,722 p=5830 u=vagrant n=ansible | changed: [vmHost2]
+2025-06-26 02:27:54,749 p=5830 u=vagrant n=ansible | TASK [Alta_Usuarios_Conurban : Crear grupos principales para cada rol] **************************************************************************************************************************************************
+2025-06-26 02:27:55,473 p=5830 u=vagrant n=ansible | changed: [vmHost1] => (item=1)
+2025-06-26 02:27:55,790 p=5830 u=vagrant n=ansible | changed: [vmHost2] => (item=1)
+2025-06-26 02:27:56,052 p=5830 u=vagrant n=ansible | changed: [vmHost1] => (item=2)
+2025-06-26 02:27:56,559 p=5830 u=vagrant n=ansible | changed: [vmHost1] => (item=3)
+2025-06-26 02:27:56,719 p=5830 u=vagrant n=ansible | changed: [vmHost2] => (item=2)
+2025-06-26 02:27:57,208 p=5830 u=vagrant n=ansible | changed: [vmHost1] => (item=4)
+2025-06-26 02:27:57,657 p=5830 u=vagrant n=ansible | changed: [vmHost2] => (item=3)
+2025-06-26 02:27:57,710 p=5830 u=vagrant n=ansible | changed: [vmHost1] => (item=5)
+2025-06-26 02:27:58,285 p=5830 u=vagrant n=ansible | changed: [vmHost1] => (item=6)
+2025-06-26 02:27:58,596 p=5830 u=vagrant n=ansible | changed: [vmHost2] => (item=4)
+2025-06-26 02:27:59,465 p=5830 u=vagrant n=ansible | changed: [vmHost2] => (item=5)
+2025-06-26 02:28:00,299 p=5830 u=vagrant n=ansible | changed: [vmHost2] => (item=6)
+2025-06-26 02:28:00,329 p=5830 u=vagrant n=ansible | TASK [Alta_Usuarios_Conurban : Crear usuarios del grupo] ****************************************************************************************************************************************************************
+2025-06-26 02:28:01,414 p=5830 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 1})
+2025-06-26 02:28:01,775 p=5830 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 1})
+2025-06-26 02:28:02,187 p=5830 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 2})
+2025-06-26 02:28:02,768 p=5830 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 3})
+2025-06-26 02:28:02,858 p=5830 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 2})
+2025-06-26 02:28:03,539 p=5830 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 4})
+2025-06-26 02:28:03,951 p=5830 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 3})
+2025-06-26 02:28:04,211 p=5830 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 5})
+2025-06-26 02:28:04,829 p=5830 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 6})
+2025-06-26 02:28:05,023 p=5830 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 4})
+2025-06-26 02:28:05,975 p=5830 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 5})
+2025-06-26 02:28:06,942 p=5830 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 6})
+2025-06-26 02:28:06,970 p=5830 u=vagrant n=ansible | TASK [Mensaje Final Ejecucion] ******************************************************************************************************************************************************************************************
+2025-06-26 02:28:07,034 p=5830 u=vagrant n=ansible | ok: [vmHost2] => {
+    "msg": "Todos los roles fueron ejecutados correctamente"
+}
+2025-06-26 02:28:07,045 p=5830 u=vagrant n=ansible | ok: [vmHost1] => {
+    "msg": "Todos los roles fueron ejecutados correctamente"
+}
+2025-06-26 02:28:07,099 p=5830 u=vagrant n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************************************
+2025-06-26 02:28:07,100 p=5830 u=vagrant n=ansible | vmHost1                    : ok=8    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-06-26 02:28:07,101 p=5830 u=vagrant n=ansible | vmHost2                    : ok=8    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-06-26 02:43:36,039 p=6813 u=vagrant n=ansible | PLAY [all] **************************************************************************************************************************************************************************************************************
+2025-06-26 02:43:36,084 p=6813 u=vagrant n=ansible | TASK [Gathering Facts] **************************************************************************************************************************************************************************************************
+2025-06-26 02:43:38,722 p=6813 u=vagrant n=ansible | ok: [vmHost2]
+2025-06-26 02:43:38,881 p=6813 u=vagrant n=ansible | ok: [vmHost1]
+2025-06-26 02:43:38,932 p=6813 u=vagrant n=ansible | TASK [Otra tarea] *******************************************************************************************************************************************************************************************************
+2025-06-26 02:43:38,996 p=6813 u=vagrant n=ansible | ok: [vmHost2] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2025-06-26 02:43:39,007 p=6813 u=vagrant n=ansible | ok: [vmHost1] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2025-06-26 02:43:39,034 p=6813 u=vagrant n=ansible | TASK [TP_INI : Crear directorio /tmp/Grupo] *****************************************************************************************************************************************************************************
+2025-06-26 02:43:39,803 p=6813 u=vagrant n=ansible | ok: [vmHost1]
+2025-06-26 02:43:39,980 p=6813 u=vagrant n=ansible | ok: [vmHost2]
+2025-06-26 02:43:40,007 p=6813 u=vagrant n=ansible | TASK [TP_INI : Generar archivo datos.txt desde template] ****************************************************************************************************************************************************************
+2025-06-26 02:43:41,487 p=6813 u=vagrant n=ansible | ok: [vmHost1]
+2025-06-26 02:43:41,626 p=6813 u=vagrant n=ansible | ok: [vmHost2]
+2025-06-26 02:43:41,653 p=6813 u=vagrant n=ansible | TASK [Alta_Usuarios_Conurban : Crear grupo secundario con Nombre del Equipo] ********************************************************************************************************************************************
+2025-06-26 02:43:42,436 p=6813 u=vagrant n=ansible | ok: [vmHost1]
+2025-06-26 02:43:42,647 p=6813 u=vagrant n=ansible | ok: [vmHost2]
+2025-06-26 02:43:42,675 p=6813 u=vagrant n=ansible | TASK [Alta_Usuarios_Conurban : Crear grupos principales para cada rol] **************************************************************************************************************************************************
+2025-06-26 02:43:43,361 p=6813 u=vagrant n=ansible | ok: [vmHost1] => (item=1)
+2025-06-26 02:43:43,630 p=6813 u=vagrant n=ansible | ok: [vmHost2] => (item=1)
+2025-06-26 02:43:43,931 p=6813 u=vagrant n=ansible | ok: [vmHost1] => (item=2)
+2025-06-26 02:43:44,401 p=6813 u=vagrant n=ansible | ok: [vmHost1] => (item=3)
+2025-06-26 02:43:44,469 p=6813 u=vagrant n=ansible | ok: [vmHost2] => (item=2)
+2025-06-26 02:43:44,989 p=6813 u=vagrant n=ansible | ok: [vmHost1] => (item=4)
+2025-06-26 02:43:45,309 p=6813 u=vagrant n=ansible | ok: [vmHost2] => (item=3)
+2025-06-26 02:43:45,529 p=6813 u=vagrant n=ansible | ok: [vmHost1] => (item=5)
+2025-06-26 02:43:45,998 p=6813 u=vagrant n=ansible | ok: [vmHost1] => (item=6)
+2025-06-26 02:43:46,105 p=6813 u=vagrant n=ansible | ok: [vmHost2] => (item=4)
+2025-06-26 02:43:46,847 p=6813 u=vagrant n=ansible | ok: [vmHost2] => (item=5)
+2025-06-26 02:43:47,597 p=6813 u=vagrant n=ansible | ok: [vmHost2] => (item=6)
+2025-06-26 02:43:47,624 p=6813 u=vagrant n=ansible | TASK [Alta_Usuarios_Conurban : Crear usuarios del grupo] ****************************************************************************************************************************************************************
+2025-06-26 02:43:48,662 p=6813 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 1})
+2025-06-26 02:43:48,945 p=6813 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 1})
+2025-06-26 02:43:49,404 p=6813 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 2})
+2025-06-26 02:43:49,933 p=6813 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 2})
+2025-06-26 02:43:49,984 p=6813 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 3})
+2025-06-26 02:43:50,664 p=6813 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 4})
+2025-06-26 02:43:50,992 p=6813 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 3})
+2025-06-26 02:43:51,373 p=6813 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 5})
+2025-06-26 02:43:51,982 p=6813 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 6})
+2025-06-26 02:43:52,041 p=6813 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 4})
+2025-06-26 02:43:52,930 p=6813 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 5})
+2025-06-26 02:43:53,825 p=6813 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 6})
+2025-06-26 02:43:53,852 p=6813 u=vagrant n=ansible | TASK [Sudoers_Conurban : Agregar archivo en /etc/sudoers.d para el grupo Conurban] **************************************************************************************************************************************
+2025-06-26 02:43:54,444 p=6813 u=vagrant n=ansible | fatal: [vmHost1]: FAILED! => {"msg": "Failed to get information on remote file (/etc/sudoers.d/Conurban): Permission denied"}
+2025-06-26 02:43:54,623 p=6813 u=vagrant n=ansible | fatal: [vmHost2]: FAILED! => {"msg": "Failed to get information on remote file (/etc/sudoers.d/Conurban): Permission denied"}
+2025-06-26 02:43:54,625 p=6813 u=vagrant n=ansible | PLAY RECAP **************************************************************************************************************************************************************************************************************
+2025-06-26 02:43:54,626 p=6813 u=vagrant n=ansible | vmHost1                    : ok=7    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-06-26 02:43:54,627 p=6813 u=vagrant n=ansible | vmHost2                    : ok=7    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-06-26 02:46:05,527 p=7696 u=vagrant n=ansible | PLAY [all] *************************************************************************************************************************************************************************************************************************************************************
+2025-06-26 02:46:05,575 p=7696 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************************************************************************************************************
+2025-06-26 02:46:08,052 p=7696 u=vagrant n=ansible | ok: [vmHost2]
+2025-06-26 02:46:08,187 p=7696 u=vagrant n=ansible | ok: [vmHost1]
+2025-06-26 02:46:08,240 p=7696 u=vagrant n=ansible | TASK [Otra tarea] ******************************************************************************************************************************************************************************************************************************************************
+2025-06-26 02:46:08,309 p=7696 u=vagrant n=ansible | ok: [vmHost2] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2025-06-26 02:46:08,324 p=7696 u=vagrant n=ansible | ok: [vmHost1] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2025-06-26 02:46:08,353 p=7696 u=vagrant n=ansible | TASK [TP_INI : Crear directorio /tmp/Grupo] ****************************************************************************************************************************************************************************************************************************
+2025-06-26 02:46:09,142 p=7696 u=vagrant n=ansible | ok: [vmHost1]
+2025-06-26 02:46:09,282 p=7696 u=vagrant n=ansible | ok: [vmHost2]
+2025-06-26 02:46:09,309 p=7696 u=vagrant n=ansible | TASK [TP_INI : Generar archivo datos.txt desde template] ***************************************************************************************************************************************************************************************************************
+2025-06-26 02:46:10,767 p=7696 u=vagrant n=ansible | ok: [vmHost1]
+2025-06-26 02:46:10,923 p=7696 u=vagrant n=ansible | ok: [vmHost2]
+2025-06-26 02:46:10,950 p=7696 u=vagrant n=ansible | TASK [Alta_Usuarios_Conurban : Crear grupo secundario con Nombre del Equipo] *******************************************************************************************************************************************************************************************
+2025-06-26 02:46:11,737 p=7696 u=vagrant n=ansible | ok: [vmHost1]
+2025-06-26 02:46:11,962 p=7696 u=vagrant n=ansible | ok: [vmHost2]
+2025-06-26 02:46:11,989 p=7696 u=vagrant n=ansible | TASK [Alta_Usuarios_Conurban : Crear grupos principales para cada rol] *************************************************************************************************************************************************************************************************
+2025-06-26 02:46:12,682 p=7696 u=vagrant n=ansible | ok: [vmHost1] => (item=1)
+2025-06-26 02:46:12,940 p=7696 u=vagrant n=ansible | ok: [vmHost2] => (item=1)
+2025-06-26 02:46:13,261 p=7696 u=vagrant n=ansible | ok: [vmHost1] => (item=2)
+2025-06-26 02:46:13,733 p=7696 u=vagrant n=ansible | ok: [vmHost1] => (item=3)
+2025-06-26 02:46:13,792 p=7696 u=vagrant n=ansible | ok: [vmHost2] => (item=2)
+2025-06-26 02:46:14,329 p=7696 u=vagrant n=ansible | ok: [vmHost1] => (item=4)
+2025-06-26 02:46:14,648 p=7696 u=vagrant n=ansible | ok: [vmHost2] => (item=3)
+2025-06-26 02:46:14,838 p=7696 u=vagrant n=ansible | ok: [vmHost1] => (item=5)
+2025-06-26 02:46:15,332 p=7696 u=vagrant n=ansible | ok: [vmHost1] => (item=6)
+2025-06-26 02:46:15,468 p=7696 u=vagrant n=ansible | ok: [vmHost2] => (item=4)
+2025-06-26 02:46:16,204 p=7696 u=vagrant n=ansible | ok: [vmHost2] => (item=5)
+2025-06-26 02:46:16,945 p=7696 u=vagrant n=ansible | ok: [vmHost2] => (item=6)
+2025-06-26 02:46:16,972 p=7696 u=vagrant n=ansible | TASK [Alta_Usuarios_Conurban : Crear usuarios del grupo] ***************************************************************************************************************************************************************************************************************
+2025-06-26 02:46:17,996 p=7696 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 1})
+2025-06-26 02:46:18,274 p=7696 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 1})
+2025-06-26 02:46:18,988 p=7696 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 2})
+2025-06-26 02:46:19,511 p=7696 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 2})
+2025-06-26 02:46:19,723 p=7696 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 3})
+2025-06-26 02:46:20,367 p=7696 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 4})
+2025-06-26 02:46:20,567 p=7696 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 3})
+2025-06-26 02:46:21,138 p=7696 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 5})
+2025-06-26 02:46:21,580 p=7696 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 4})
+2025-06-26 02:46:21,779 p=7696 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 6})
+2025-06-26 02:46:22,522 p=7696 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 5})
+2025-06-26 02:46:23,415 p=7696 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 6})
+2025-06-26 02:46:23,449 p=7696 u=vagrant n=ansible | TASK [Sudoers_Conurban : Agregar archivo en /etc/sudoers.d para el grupo Conurban] *************************************************************************************************************************************************************************************
+2025-06-26 02:46:24,843 p=7696 u=vagrant n=ansible | changed: [vmHost1]
+2025-06-26 02:46:25,059 p=7696 u=vagrant n=ansible | changed: [vmHost2]
+2025-06-26 02:46:25,087 p=7696 u=vagrant n=ansible | TASK [Mensaje Final Ejecucion] *****************************************************************************************************************************************************************************************************************************************
+2025-06-26 02:46:25,156 p=7696 u=vagrant n=ansible | ok: [vmHost2] => {
+    "msg": "Todos los roles fueron ejecutados correctamente"
+}
+2025-06-26 02:46:25,167 p=7696 u=vagrant n=ansible | ok: [vmHost1] => {
+    "msg": "Todos los roles fueron ejecutados correctamente"
+}
+2025-06-26 02:46:25,221 p=7696 u=vagrant n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************************************************************************************
+2025-06-26 02:46:25,223 p=7696 u=vagrant n=ansible | vmHost1                    : ok=9    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-06-26 02:46:25,225 p=7696 u=vagrant n=ansible | vmHost2                    : ok=9    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-06-26 03:04:20,364 p=8653 u=vagrant n=ansible | PLAY [all] *************************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:04:20,411 p=8653 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:04:23,906 p=8653 u=vagrant n=ansible | ok: [vmHost2]
+2025-06-26 03:04:24,067 p=8653 u=vagrant n=ansible | ok: [vmHost1]
+2025-06-26 03:04:24,127 p=8653 u=vagrant n=ansible | TASK [Inicio] **********************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:04:24,200 p=8653 u=vagrant n=ansible | ok: [vmHost2] => {
+    "msg": "Comienza la ejecucion de roles Conurban"
+}
+2025-06-26 03:04:24,213 p=8653 u=vagrant n=ansible | ok: [vmHost1] => {
+    "msg": "Comienza la ejecucion de roles Conurban"
+}
+2025-06-26 03:04:24,258 p=8653 u=vagrant n=ansible | TASK [TP_INI : Crear directorio /tmp/Grupo] ****************************************************************************************************************************************************************************************************************************
+2025-06-26 03:04:25,171 p=8653 u=vagrant n=ansible | ok: [vmHost1]
+2025-06-26 03:04:25,342 p=8653 u=vagrant n=ansible | ok: [vmHost2]
+2025-06-26 03:04:25,372 p=8653 u=vagrant n=ansible | TASK [TP_INI : Generar archivo datos.txt desde template] ***************************************************************************************************************************************************************************************************************
+2025-06-26 03:04:26,892 p=8653 u=vagrant n=ansible | ok: [vmHost1]
+2025-06-26 03:04:27,070 p=8653 u=vagrant n=ansible | ok: [vmHost2]
+2025-06-26 03:04:27,099 p=8653 u=vagrant n=ansible | TASK [Alta_Usuarios_Conurban : Crear grupo secundario con Nombre del Equipo] *******************************************************************************************************************************************************************************************
+2025-06-26 03:04:27,976 p=8653 u=vagrant n=ansible | ok: [vmHost1]
+2025-06-26 03:04:28,173 p=8653 u=vagrant n=ansible | ok: [vmHost2]
+2025-06-26 03:04:28,200 p=8653 u=vagrant n=ansible | TASK [Alta_Usuarios_Conurban : Crear grupos principales para cada rol] *************************************************************************************************************************************************************************************************
+2025-06-26 03:04:29,028 p=8653 u=vagrant n=ansible | ok: [vmHost1] => (item=1)
+2025-06-26 03:04:29,297 p=8653 u=vagrant n=ansible | ok: [vmHost2] => (item=1)
+2025-06-26 03:04:29,596 p=8653 u=vagrant n=ansible | ok: [vmHost1] => (item=2)
+2025-06-26 03:04:30,056 p=8653 u=vagrant n=ansible | ok: [vmHost1] => (item=3)
+2025-06-26 03:04:30,116 p=8653 u=vagrant n=ansible | ok: [vmHost2] => (item=2)
+2025-06-26 03:04:30,655 p=8653 u=vagrant n=ansible | ok: [vmHost1] => (item=4)
+2025-06-26 03:04:30,974 p=8653 u=vagrant n=ansible | ok: [vmHost2] => (item=3)
+2025-06-26 03:04:31,182 p=8653 u=vagrant n=ansible | ok: [vmHost1] => (item=5)
+2025-06-26 03:04:31,649 p=8653 u=vagrant n=ansible | ok: [vmHost1] => (item=6)
+2025-06-26 03:04:31,761 p=8653 u=vagrant n=ansible | ok: [vmHost2] => (item=4)
+2025-06-26 03:04:32,512 p=8653 u=vagrant n=ansible | ok: [vmHost2] => (item=5)
+2025-06-26 03:04:33,247 p=8653 u=vagrant n=ansible | ok: [vmHost2] => (item=6)
+2025-06-26 03:04:33,274 p=8653 u=vagrant n=ansible | TASK [Alta_Usuarios_Conurban : Crear usuarios del grupo] ***************************************************************************************************************************************************************************************************************
+2025-06-26 03:04:34,464 p=8653 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 1})
+2025-06-26 03:04:34,757 p=8653 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 1})
+2025-06-26 03:04:35,212 p=8653 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 2})
+2025-06-26 03:04:35,743 p=8653 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 2})
+2025-06-26 03:04:35,793 p=8653 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 3})
+2025-06-26 03:04:36,456 p=8653 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 4})
+2025-06-26 03:04:36,767 p=8653 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 3})
+2025-06-26 03:04:37,179 p=8653 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 5})
+2025-06-26 03:04:37,731 p=8653 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 6})
+2025-06-26 03:04:37,781 p=8653 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 4})
+2025-06-26 03:04:38,693 p=8653 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 5})
+2025-06-26 03:04:39,624 p=8653 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 6})
+2025-06-26 03:04:39,653 p=8653 u=vagrant n=ansible | TASK [Sudoers_Conurban : Agregar archivo en /etc/sudoers.d para el grupo Conurban] *************************************************************************************************************************************************************************************
+2025-06-26 03:04:40,737 p=8653 u=vagrant n=ansible | ok: [vmHost1]
+2025-06-26 03:04:41,124 p=8653 u=vagrant n=ansible | ok: [vmHost2]
+2025-06-26 03:04:41,151 p=8653 u=vagrant n=ansible | TASK [Instala-tools_Conurban : Instala programas] **********************************************************************************************************************************************************************************************************************
+2025-06-26 03:04:46,001 p=8653 u=vagrant n=ansible | ok: [vmHost1] => (item=htop)
+2025-06-26 03:04:46,209 p=8653 u=vagrant n=ansible | failed: [vmHost2] (item=htop) => {"ansible_loop_var": "item", "changed": false, "failures": [], "item": "htop", "msg": "Depsolve Error occured: \n Problem: conflicting requests\n  - nothing provides libhwloc.so.15()(64bit) needed by htop-3.3.0-1.el9.x86_64 from epel", "rc": 1, "results": []}
+2025-06-26 03:04:47,956 p=8653 u=vagrant n=ansible | ok: [vmHost1] => (item=tmux)
+2025-06-26 03:04:48,172 p=8653 u=vagrant n=ansible | failed: [vmHost2] (item=tmux) => {"ansible_loop_var": "item", "changed": false, "failures": ["No package tmux available."], "item": "tmux", "msg": "Failed to install some of the specified packages", "rc": 1, "results": []}
+2025-06-26 03:04:53,704 p=8653 u=vagrant n=ansible | changed: [vmHost2] => (item=speedtest-cli)
+2025-06-26 03:05:01,607 p=8653 u=vagrant n=ansible | changed: [vmHost1] => (item=speedtest-cli)
+2025-06-26 03:05:01,636 p=8653 u=vagrant n=ansible | TASK [Mensaje Final Ejecucion] *****************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:05:01,660 p=8653 u=vagrant n=ansible | ok: [vmHost1] => {
+    "msg": "Todos los roles fueron ejecutados correctamente"
+}
+2025-06-26 03:05:01,717 p=8653 u=vagrant n=ansible | PLAY RECAP *************************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:05:01,719 p=8653 u=vagrant n=ansible | vmHost1                    : ok=10   changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-06-26 03:05:01,720 p=8653 u=vagrant n=ansible | vmHost2                    : ok=8    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-06-26 03:11:03,635 p=9821 u=vagrant n=ansible | PLAY [all] ***********************************************************************************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:11:03,683 p=9821 u=vagrant n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:11:06,833 p=9821 u=vagrant n=ansible | ok: [vmHost2]
+2025-06-26 03:11:07,115 p=9821 u=vagrant n=ansible | ok: [vmHost1]
+2025-06-26 03:11:07,170 p=9821 u=vagrant n=ansible | TASK [Inicio] ********************************************************************************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:11:07,235 p=9821 u=vagrant n=ansible | ok: [vmHost2] => {
+    "msg": "Comienza la ejecucion de roles Conurban"
+}
+2025-06-26 03:11:07,244 p=9821 u=vagrant n=ansible | ok: [vmHost1] => {
+    "msg": "Comienza la ejecucion de roles Conurban"
+}
+2025-06-26 03:11:07,275 p=9821 u=vagrant n=ansible | TASK [TP_INI : Crear directorio /tmp/Grupo] **************************************************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:11:08,073 p=9821 u=vagrant n=ansible | ok: [vmHost1]
+2025-06-26 03:11:08,217 p=9821 u=vagrant n=ansible | ok: [vmHost2]
+2025-06-26 03:11:08,245 p=9821 u=vagrant n=ansible | TASK [TP_INI : Generar archivo datos.txt desde template] *************************************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:11:09,768 p=9821 u=vagrant n=ansible | ok: [vmHost1]
+2025-06-26 03:11:09,945 p=9821 u=vagrant n=ansible | ok: [vmHost2]
+2025-06-26 03:11:09,971 p=9821 u=vagrant n=ansible | TASK [Alta_Usuarios_Conurban : Crear grupo secundario con Nombre del Equipo] *****************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:11:10,737 p=9821 u=vagrant n=ansible | ok: [vmHost1]
+2025-06-26 03:11:10,935 p=9821 u=vagrant n=ansible | ok: [vmHost2]
+2025-06-26 03:11:10,964 p=9821 u=vagrant n=ansible | TASK [Alta_Usuarios_Conurban : Crear grupos principales para cada rol] ***********************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:11:11,668 p=9821 u=vagrant n=ansible | ok: [vmHost1] => (item=1)
+2025-06-26 03:11:11,916 p=9821 u=vagrant n=ansible | ok: [vmHost2] => (item=1)
+2025-06-26 03:11:12,236 p=9821 u=vagrant n=ansible | ok: [vmHost1] => (item=2)
+2025-06-26 03:11:12,721 p=9821 u=vagrant n=ansible | ok: [vmHost1] => (item=3)
+2025-06-26 03:11:12,785 p=9821 u=vagrant n=ansible | ok: [vmHost2] => (item=2)
+2025-06-26 03:11:13,319 p=9821 u=vagrant n=ansible | ok: [vmHost1] => (item=4)
+2025-06-26 03:11:13,723 p=9821 u=vagrant n=ansible | ok: [vmHost2] => (item=3)
+2025-06-26 03:11:13,888 p=9821 u=vagrant n=ansible | ok: [vmHost1] => (item=5)
+2025-06-26 03:11:14,437 p=9821 u=vagrant n=ansible | ok: [vmHost1] => (item=6)
+2025-06-26 03:11:14,708 p=9821 u=vagrant n=ansible | ok: [vmHost2] => (item=4)
+2025-06-26 03:11:16,106 p=9821 u=vagrant n=ansible | ok: [vmHost2] => (item=5)
+2025-06-26 03:11:16,981 p=9821 u=vagrant n=ansible | ok: [vmHost2] => (item=6)
+2025-06-26 03:11:17,017 p=9821 u=vagrant n=ansible | TASK [Alta_Usuarios_Conurban : Crear usuarios del grupo] *************************************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:11:18,306 p=9821 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 1})
+2025-06-26 03:11:18,647 p=9821 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 1})
+2025-06-26 03:11:19,325 p=9821 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 2})
+2025-06-26 03:11:20,235 p=9821 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 2})
+2025-06-26 03:11:20,295 p=9821 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 3})
+2025-06-26 03:11:21,232 p=9821 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 4})
+2025-06-26 03:11:21,572 p=9821 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 3})
+2025-06-26 03:11:22,021 p=9821 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 5})
+2025-06-26 03:11:22,611 p=9821 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 6})
+2025-06-26 03:11:22,650 p=9821 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 4})
+2025-06-26 03:11:23,598 p=9821 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 5})
+2025-06-26 03:11:24,537 p=9821 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 6})
+2025-06-26 03:11:24,567 p=9821 u=vagrant n=ansible | TASK [Sudoers_Conurban : Agregar archivo en /etc/sudoers.d para el grupo Conurban] ***********************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:11:25,690 p=9821 u=vagrant n=ansible | ok: [vmHost1]
+2025-06-26 03:11:26,084 p=9821 u=vagrant n=ansible | ok: [vmHost2]
+2025-06-26 03:11:26,112 p=9821 u=vagrant n=ansible | TASK [Instala-tools_Conurban : Instala EPEL y CRB] *******************************************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:11:27,229 p=9821 u=vagrant n=ansible | fatal: [vmHost1]: FAILED! => {"changed": false, "cmd": "dnf install -y python3-dnf", "msg": "[Errno 2] No such file or directory: b'dnf'", "rc": 2}
+2025-06-26 03:11:28,535 p=9821 u=vagrant n=ansible | ok: [vmHost2]
+2025-06-26 03:11:28,572 p=9821 u=vagrant n=ansible | TASK [Instala-tools_Conurban : Habilita CodeReady Builder (CRB)] *****************************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:11:30,119 p=9821 u=vagrant n=ansible | [WARNING]: Consider using the dnf module rather than running 'dnf'.  If you need to use command because dnf is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message.
+
+2025-06-26 03:11:30,122 p=9821 u=vagrant n=ansible | fatal: [vmHost2]: FAILED! => {"changed": true, "cmd": ["dnf", "config-manager", "--set-enabled", "crb"], "delta": "0:00:00.575192", "end": "2025-06-26 03:11:30.156131", "msg": "non-zero return code", "rc": 1, "start": "2025-06-26 03:11:29.580939", "stderr": "Error: No matching repo to modify: crb.", "stderr_lines": ["Error: No matching repo to modify: crb."], "stdout": "Updating Subscription Management repositories.\nUnable to read consumer identity\n\nThis system is not registered with an entitlement server. You can use subscription-manager to register.", "stdout_lines": ["Updating Subscription Management repositories.", "Unable to read consumer identity", "", "This system is not registered with an entitlement server. You can use subscription-manager to register."]}
+2025-06-26 03:11:30,125 p=9821 u=vagrant n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:11:30,126 p=9821 u=vagrant n=ansible | vmHost1                    : ok=8    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-06-26 03:11:30,128 p=9821 u=vagrant n=ansible | vmHost2                    : ok=9    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-06-26 03:17:49,323 p=10787 u=vagrant n=ansible | PLAY [all] ***********************************************************************************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:17:49,368 p=10787 u=vagrant n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:17:51,925 p=10787 u=vagrant n=ansible | ok: [vmHost2]
+2025-06-26 03:17:52,052 p=10787 u=vagrant n=ansible | ok: [vmHost1]
+2025-06-26 03:17:52,104 p=10787 u=vagrant n=ansible | TASK [Inicio] ********************************************************************************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:17:52,171 p=10787 u=vagrant n=ansible | ok: [vmHost2] => {
+    "msg": "Comienza la ejecucion de roles Conurban"
+}
+2025-06-26 03:17:52,181 p=10787 u=vagrant n=ansible | ok: [vmHost1] => {
+    "msg": "Comienza la ejecucion de roles Conurban"
+}
+2025-06-26 03:17:52,210 p=10787 u=vagrant n=ansible | TASK [TP_INI : Crear directorio /tmp/Grupo] **************************************************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:17:52,992 p=10787 u=vagrant n=ansible | ok: [vmHost1]
+2025-06-26 03:17:53,145 p=10787 u=vagrant n=ansible | ok: [vmHost2]
+2025-06-26 03:17:53,172 p=10787 u=vagrant n=ansible | TASK [TP_INI : Generar archivo datos.txt desde template] *************************************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:17:54,644 p=10787 u=vagrant n=ansible | ok: [vmHost1]
+2025-06-26 03:17:54,789 p=10787 u=vagrant n=ansible | ok: [vmHost2]
+2025-06-26 03:17:54,819 p=10787 u=vagrant n=ansible | TASK [Alta_Usuarios_Conurban : Crear grupo secundario con Nombre del Equipo] *****************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:17:55,612 p=10787 u=vagrant n=ansible | ok: [vmHost1]
+2025-06-26 03:17:55,820 p=10787 u=vagrant n=ansible | ok: [vmHost2]
+2025-06-26 03:17:55,846 p=10787 u=vagrant n=ansible | TASK [Alta_Usuarios_Conurban : Crear grupos principales para cada rol] ***********************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:17:56,536 p=10787 u=vagrant n=ansible | ok: [vmHost1] => (item=1)
+2025-06-26 03:17:56,805 p=10787 u=vagrant n=ansible | ok: [vmHost2] => (item=1)
+2025-06-26 03:17:57,109 p=10787 u=vagrant n=ansible | ok: [vmHost1] => (item=2)
+2025-06-26 03:17:57,565 p=10787 u=vagrant n=ansible | ok: [vmHost1] => (item=3)
+2025-06-26 03:17:57,634 p=10787 u=vagrant n=ansible | ok: [vmHost2] => (item=2)
+2025-06-26 03:17:58,154 p=10787 u=vagrant n=ansible | ok: [vmHost1] => (item=4)
+2025-06-26 03:17:58,486 p=10787 u=vagrant n=ansible | ok: [vmHost2] => (item=3)
+2025-06-26 03:17:58,687 p=10787 u=vagrant n=ansible | ok: [vmHost1] => (item=5)
+2025-06-26 03:17:59,189 p=10787 u=vagrant n=ansible | ok: [vmHost1] => (item=6)
+2025-06-26 03:17:59,302 p=10787 u=vagrant n=ansible | ok: [vmHost2] => (item=4)
+2025-06-26 03:18:00,043 p=10787 u=vagrant n=ansible | ok: [vmHost2] => (item=5)
+2025-06-26 03:18:00,761 p=10787 u=vagrant n=ansible | ok: [vmHost2] => (item=6)
+2025-06-26 03:18:00,788 p=10787 u=vagrant n=ansible | TASK [Alta_Usuarios_Conurban : Crear usuarios del grupo] *************************************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:18:01,825 p=10787 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 1})
+2025-06-26 03:18:02,102 p=10787 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 1})
+2025-06-26 03:18:02,573 p=10787 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 2})
+2025-06-26 03:18:03,105 p=10787 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 2})
+2025-06-26 03:18:03,169 p=10787 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 3})
+2025-06-26 03:18:03,845 p=10787 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 4})
+2025-06-26 03:18:04,157 p=10787 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 3})
+2025-06-26 03:18:04,560 p=10787 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 5})
+2025-06-26 03:18:05,118 p=10787 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 6})
+2025-06-26 03:18:05,181 p=10787 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 4})
+2025-06-26 03:18:06,081 p=10787 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 5})
+2025-06-26 03:18:06,972 p=10787 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 6})
+2025-06-26 03:18:07,000 p=10787 u=vagrant n=ansible | TASK [Sudoers_Conurban : Agregar archivo en /etc/sudoers.d para el grupo Conurban] ***********************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:18:08,105 p=10787 u=vagrant n=ansible | ok: [vmHost1]
+2025-06-26 03:18:08,474 p=10787 u=vagrant n=ansible | ok: [vmHost2]
+2025-06-26 03:18:08,500 p=10787 u=vagrant n=ansible | TASK [Instala-tools_Conurban : Instala EPEL en sistemas basados en Red Hat] ******************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:18:08,630 p=10787 u=vagrant n=ansible | skipping: [vmHost1]
+2025-06-26 03:18:10,552 p=10787 u=vagrant n=ansible | ok: [vmHost2]
+2025-06-26 03:18:10,584 p=10787 u=vagrant n=ansible | TASK [Instala-tools_Conurban : Habilita CRB si es RHEL/CentOS 9] *****************************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:18:10,713 p=10787 u=vagrant n=ansible | skipping: [vmHost1]
+2025-06-26 03:18:12,110 p=10787 u=vagrant n=ansible | [WARNING]: Consider using the dnf module rather than running 'dnf'.  If you need to use command because dnf is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message.
+
+2025-06-26 03:18:12,112 p=10787 u=vagrant n=ansible | fatal: [vmHost2]: FAILED! => {"changed": true, "cmd": ["dnf", "config-manager", "--set-enabled", "crb"], "delta": "0:00:00.530233", "end": "2025-06-26 03:18:12.073971", "msg": "non-zero return code", "rc": 1, "start": "2025-06-26 03:18:11.543738", "stderr": "Error: No matching repo to modify: crb.", "stderr_lines": ["Error: No matching repo to modify: crb."], "stdout": "Updating Subscription Management repositories.\nUnable to read consumer identity\n\nThis system is not registered with an entitlement server. You can use subscription-manager to register.", "stdout_lines": ["Updating Subscription Management repositories.", "Unable to read consumer identity", "", "This system is not registered with an entitlement server. You can use subscription-manager to register."]}
+2025-06-26 03:18:12,114 p=10787 u=vagrant n=ansible | ...ignoring
+2025-06-26 03:18:12,141 p=10787 u=vagrant n=ansible | TASK [Instala-tools_Conurban : Actualiza caché en sistemas Red Hat] **************************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:18:12,283 p=10787 u=vagrant n=ansible | skipping: [vmHost1]
+2025-06-26 03:18:15,905 p=10787 u=vagrant n=ansible | ok: [vmHost2]
+2025-06-26 03:18:15,930 p=10787 u=vagrant n=ansible | TASK [Instala-tools_Conurban : Actualiza caché en sistemas Debian] ***************************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:18:16,027 p=10787 u=vagrant n=ansible | skipping: [vmHost2]
+2025-06-26 03:18:27,756 p=10787 u=vagrant n=ansible | changed: [vmHost1]
+2025-06-26 03:18:27,785 p=10787 u=vagrant n=ansible | TASK [Instala-tools_Conurban : Instala herramientas en sistemas Red Hat] *********************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:18:27,956 p=10787 u=vagrant n=ansible | skipping: [vmHost1] => (item=htop) 
+2025-06-26 03:18:27,964 p=10787 u=vagrant n=ansible | skipping: [vmHost1] => (item=tmux) 
+2025-06-26 03:18:27,972 p=10787 u=vagrant n=ansible | skipping: [vmHost1] => (item=speedtest-cli) 
+2025-06-26 03:18:30,109 p=10787 u=vagrant n=ansible | failed: [vmHost2] (item=htop) => {"ansible_loop_var": "item", "changed": false, "failures": [], "item": "htop", "msg": "Depsolve Error occured: \n Problem: conflicting requests\n  - nothing provides libhwloc.so.15()(64bit) needed by htop-3.3.0-1.el9.x86_64 from epel", "rc": 1, "results": []}
+2025-06-26 03:18:31,893 p=10787 u=vagrant n=ansible | failed: [vmHost2] (item=tmux) => {"ansible_loop_var": "item", "changed": false, "failures": ["No package tmux available."], "item": "tmux", "msg": "Failed to install some of the specified packages", "rc": 1, "results": []}
+2025-06-26 03:18:33,654 p=10787 u=vagrant n=ansible | ok: [vmHost2] => (item=speedtest-cli)
+2025-06-26 03:18:33,685 p=10787 u=vagrant n=ansible | TASK [Instala-tools_Conurban : Instala herramientas en sistemas Debian] **********************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:18:35,290 p=10787 u=vagrant n=ansible | ok: [vmHost1] => (item=htop)
+2025-06-26 03:18:36,738 p=10787 u=vagrant n=ansible | ok: [vmHost1] => (item=tmux)
+2025-06-26 03:18:38,196 p=10787 u=vagrant n=ansible | ok: [vmHost1] => (item=speedtest-cli)
+2025-06-26 03:18:38,227 p=10787 u=vagrant n=ansible | TASK [Mensaje Final Ejecucion] ***************************************************************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:18:38,254 p=10787 u=vagrant n=ansible | ok: [vmHost1] => {
+    "msg": "Todos los roles fueron ejecutados correctamente"
+}
+2025-06-26 03:18:38,310 p=10787 u=vagrant n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:18:38,312 p=10787 u=vagrant n=ansible | vmHost1                    : ok=11   changed=2    unreachable=0    failed=0    skipped=4    rescued=0    ignored=0   
+2025-06-26 03:18:38,313 p=10787 u=vagrant n=ansible | vmHost2                    : ok=11   changed=2    unreachable=0    failed=1    skipped=1    rescued=0    ignored=1   
+2025-06-26 03:24:54,805 p=12259 u=vagrant n=ansible | PLAY [all] ***********************************************************************************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:24:54,857 p=12259 u=vagrant n=ansible | TASK [Gathering Facts] ***********************************************************************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:24:57,542 p=12259 u=vagrant n=ansible | ok: [vmHost2]
+2025-06-26 03:24:57,820 p=12259 u=vagrant n=ansible | ok: [vmHost1]
+2025-06-26 03:24:57,874 p=12259 u=vagrant n=ansible | TASK [Inicio] ********************************************************************************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:24:57,938 p=12259 u=vagrant n=ansible | ok: [vmHost2] => {
+    "msg": "Comienza la ejecucion de roles Conurban"
+}
+2025-06-26 03:24:57,949 p=12259 u=vagrant n=ansible | ok: [vmHost1] => {
+    "msg": "Comienza la ejecucion de roles Conurban"
+}
+2025-06-26 03:24:57,977 p=12259 u=vagrant n=ansible | TASK [TP_INI : Crear directorio /tmp/Grupo] **************************************************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:24:58,763 p=12259 u=vagrant n=ansible | ok: [vmHost1]
+2025-06-26 03:24:58,911 p=12259 u=vagrant n=ansible | ok: [vmHost2]
+2025-06-26 03:24:58,937 p=12259 u=vagrant n=ansible | TASK [TP_INI : Generar archivo datos.txt desde template] *************************************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:25:00,453 p=12259 u=vagrant n=ansible | ok: [vmHost1]
+2025-06-26 03:25:00,582 p=12259 u=vagrant n=ansible | ok: [vmHost2]
+2025-06-26 03:25:00,642 p=12259 u=vagrant n=ansible | TASK [Alta_Usuarios_Conurban : Crear grupo secundario con Nombre del Equipo] *****************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:25:01,397 p=12259 u=vagrant n=ansible | ok: [vmHost1]
+2025-06-26 03:25:01,583 p=12259 u=vagrant n=ansible | ok: [vmHost2]
+2025-06-26 03:25:01,611 p=12259 u=vagrant n=ansible | TASK [Alta_Usuarios_Conurban : Crear grupos principales para cada rol] ***********************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:25:02,303 p=12259 u=vagrant n=ansible | ok: [vmHost1] => (item=1)
+2025-06-26 03:25:02,561 p=12259 u=vagrant n=ansible | ok: [vmHost2] => (item=1)
+2025-06-26 03:25:02,871 p=12259 u=vagrant n=ansible | ok: [vmHost1] => (item=2)
+2025-06-26 03:25:03,332 p=12259 u=vagrant n=ansible | ok: [vmHost1] => (item=3)
+2025-06-26 03:25:03,381 p=12259 u=vagrant n=ansible | ok: [vmHost2] => (item=2)
+2025-06-26 03:25:03,921 p=12259 u=vagrant n=ansible | ok: [vmHost1] => (item=4)
+2025-06-26 03:25:04,236 p=12259 u=vagrant n=ansible | ok: [vmHost2] => (item=3)
+2025-06-26 03:25:04,460 p=12259 u=vagrant n=ansible | ok: [vmHost1] => (item=5)
+2025-06-26 03:25:05,035 p=12259 u=vagrant n=ansible | ok: [vmHost1] => (item=6)
+2025-06-26 03:25:05,190 p=12259 u=vagrant n=ansible | ok: [vmHost2] => (item=4)
+2025-06-26 03:25:06,019 p=12259 u=vagrant n=ansible | ok: [vmHost2] => (item=5)
+2025-06-26 03:25:06,797 p=12259 u=vagrant n=ansible | ok: [vmHost2] => (item=6)
+2025-06-26 03:25:06,826 p=12259 u=vagrant n=ansible | TASK [Alta_Usuarios_Conurban : Crear usuarios del grupo] *************************************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:25:08,854 p=12259 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 1})
+2025-06-26 03:25:09,135 p=12259 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 1})
+2025-06-26 03:25:09,795 p=12259 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 2})
+2025-06-26 03:25:10,456 p=12259 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 3})
+2025-06-26 03:25:10,494 p=12259 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 2})
+2025-06-26 03:25:11,323 p=12259 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 4})
+2025-06-26 03:25:11,733 p=12259 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 3})
+2025-06-26 03:25:12,152 p=12259 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 5})
+2025-06-26 03:25:12,810 p=12259 u=vagrant n=ansible | changed: [vmHost1] => (item={'numero': 6})
+2025-06-26 03:25:12,891 p=12259 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 4})
+2025-06-26 03:25:13,931 p=12259 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 5})
+2025-06-26 03:25:14,989 p=12259 u=vagrant n=ansible | changed: [vmHost2] => (item={'numero': 6})
+2025-06-26 03:25:15,034 p=12259 u=vagrant n=ansible | TASK [Sudoers_Conurban : Agregar archivo en /etc/sudoers.d para el grupo Conurban] ***********************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:25:16,299 p=12259 u=vagrant n=ansible | ok: [vmHost1]
+2025-06-26 03:25:16,741 p=12259 u=vagrant n=ansible | ok: [vmHost2]
+2025-06-26 03:25:16,772 p=12259 u=vagrant n=ansible | TASK [Instala-tools_Conurban : Instala EPEL en sistemas basados en Red Hat] ******************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:25:16,925 p=12259 u=vagrant n=ansible | skipping: [vmHost1]
+2025-06-26 03:25:19,360 p=12259 u=vagrant n=ansible | ok: [vmHost2]
+2025-06-26 03:25:19,400 p=12259 u=vagrant n=ansible | TASK [Instala-tools_Conurban : Habilita CRB si es RHEL/CentOS 9] *****************************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:25:19,547 p=12259 u=vagrant n=ansible | skipping: [vmHost1]
+2025-06-26 03:25:21,170 p=12259 u=vagrant n=ansible | [WARNING]: Consider using the dnf module rather than running 'dnf'.  If you need to use command because dnf is insufficient you can add 'warn: false' to this command task or set 'command_warnings=False' in ansible.cfg to get rid of this message.
+
+2025-06-26 03:25:21,173 p=12259 u=vagrant n=ansible | fatal: [vmHost2]: FAILED! => {"changed": true, "cmd": ["dnf", "config-manager", "--set-enabled", "crb"], "delta": "0:00:00.628152", "end": "2025-06-26 03:25:21.162786", "msg": "non-zero return code", "rc": 1, "start": "2025-06-26 03:25:20.534634", "stderr": "Error: No matching repo to modify: crb.", "stderr_lines": ["Error: No matching repo to modify: crb."], "stdout": "Updating Subscription Management repositories.\nUnable to read consumer identity\n\nThis system is not registered with an entitlement server. You can use subscription-manager to register.", "stdout_lines": ["Updating Subscription Management repositories.", "Unable to read consumer identity", "", "This system is not registered with an entitlement server. You can use subscription-manager to register."]}
+2025-06-26 03:25:21,175 p=12259 u=vagrant n=ansible | ...ignoring
+2025-06-26 03:25:21,206 p=12259 u=vagrant n=ansible | TASK [Instala-tools_Conurban : Actualiza caché en sistemas Red Hat] **************************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:25:21,350 p=12259 u=vagrant n=ansible | skipping: [vmHost1]
+2025-06-26 03:25:24,960 p=12259 u=vagrant n=ansible | ok: [vmHost2]
+2025-06-26 03:25:24,996 p=12259 u=vagrant n=ansible | TASK [Instala-tools_Conurban : Actualiza caché en sistemas Debian] ***************************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:25:25,096 p=12259 u=vagrant n=ansible | skipping: [vmHost2]
+2025-06-26 03:25:31,219 p=12259 u=vagrant n=ansible | changed: [vmHost1]
+2025-06-26 03:25:31,294 p=12259 u=vagrant n=ansible | TASK [Instala-tools_Conurban : Instala herramientas en sistemas Red Hat] *********************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:25:31,705 p=12259 u=vagrant n=ansible | skipping: [vmHost1] => (item=speedtest-cli) 
+2025-06-26 03:25:34,090 p=12259 u=vagrant n=ansible | ok: [vmHost2] => (item=speedtest-cli)
+2025-06-26 03:25:34,121 p=12259 u=vagrant n=ansible | TASK [Instala-tools_Conurban : Instala herramientas en sistemas Debian] **********************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:25:34,244 p=12259 u=vagrant n=ansible | skipping: [vmHost2] => (item=htop) 
+2025-06-26 03:25:34,247 p=12259 u=vagrant n=ansible | skipping: [vmHost2] => (item=tmux) 
+2025-06-26 03:25:34,264 p=12259 u=vagrant n=ansible | skipping: [vmHost2] => (item=speedtest-cli) 
+2025-06-26 03:25:36,220 p=12259 u=vagrant n=ansible | ok: [vmHost1] => (item=htop)
+2025-06-26 03:25:37,916 p=12259 u=vagrant n=ansible | ok: [vmHost1] => (item=tmux)
+2025-06-26 03:25:39,639 p=12259 u=vagrant n=ansible | ok: [vmHost1] => (item=speedtest-cli)
+2025-06-26 03:25:39,671 p=12259 u=vagrant n=ansible | TASK [Mensaje Final Ejecucion] ***************************************************************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:25:39,740 p=12259 u=vagrant n=ansible | ok: [vmHost2] => {
+    "msg": "Todos los roles fueron ejecutados correctamente"
+}
+2025-06-26 03:25:39,758 p=12259 u=vagrant n=ansible | ok: [vmHost1] => {
+    "msg": "Todos los roles fueron ejecutados correctamente"
+}
+2025-06-26 03:25:39,819 p=12259 u=vagrant n=ansible | PLAY RECAP ***********************************************************************************************************************************************************************************************************************************************************************************************************************
+2025-06-26 03:25:39,820 p=12259 u=vagrant n=ansible | vmHost1                    : ok=11   changed=2    unreachable=0    failed=0    skipped=4    rescued=0    ignored=0   
+2025-06-26 03:25:39,822 p=12259 u=vagrant n=ansible | vmHost2                    : ok=13   changed=2    unreachable=0    failed=0    skipped=2    rescued=0    ignored=1   

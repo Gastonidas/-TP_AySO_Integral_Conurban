@@ -1,2 +1,12 @@
 ---
 # tasks file for Sudoers_Conurban
+
+- name: Agregar archivo en /etc/sudoers.d para el grupo Conurban
+  become: yes
+  copy:
+    content: "%Conurban ALL=(ALL) NOPASSWD: ALL"
+    dest: /etc/sudoers.d/Conurban
+    owner: root
+    group: root
+    mode: '0440'
+    validate: '/usr/sbin/visudo -cf %s'
