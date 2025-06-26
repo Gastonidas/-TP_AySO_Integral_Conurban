@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-
+  
   config.vm.define "primero" do |vmHost1|
     vmHost1.vm.box = "ubuntu/jammy64"
     vmHost1.vm.hostname = "vmHost1"
